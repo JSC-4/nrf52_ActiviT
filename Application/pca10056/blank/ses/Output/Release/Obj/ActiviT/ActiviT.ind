@@ -45,6 +45,7 @@
 "Output/Release/Obj/ActiviT/orkney24pts.o"
 "Output/Release/Obj/ActiviT/orkney8pts.o"
 "Output/Release/Obj/ActiviT/main.o"
+"Output/Release/Obj/ActiviT/mpu6050.o"
 "Output/Release/Obj/ActiviT/bsp.o"
 "Output/Release/Obj/ActiviT/nrf_twi_sensor.o"
 "Output/Release/Obj/ActiviT/aes.o"
