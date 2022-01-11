@@ -1,55 +1,122 @@
 #ifndef MPU6050_H__
 #define MPU6050_H__
 
+/* MPU6050 ADDRESS*/
+#define MPU6050_ADDRESS     (0xD0>>1)  //MPU6050 Device Address
 
-//MPU6050 Registers addresses, see datasheet for more info and each register's function
-#define MPU_SELF_TESTX_REG		0x0D	
-#define MPU_SELF_TESTY_REG		0x0E	
-#define MPU_SELF_TESTZ_REG		0x0F	
-#define MPU_SELF_TESTA_REG		0x10	
-#define MPU_SAMPLE_RATE_REG		0x19	
-#define MPU_CFG_REG                     0x1A	
-#define MPU_GYRO_CFG_REG		0x1B	
-#define MPU_ACCEL_CFG_REG		0x1C	
-#define MPU_MOTION_DET_REG		0x1F	
-#define MPU_FIFO_EN_REG			0x23	
-#define MPU_I2CMST_CTRL_REG		0x24	
-#define MPU_I2CSLV0_ADDR_REG            0x25	
-#define MPU_I2CSLV0_REG			0x26	
-#define MPU_I2CSLV0_CTRL_REG            0x27	
-#define MPU_I2CSLV1_ADDR_REG            0x28	
-#define MPU_I2CSLV1_REG			0x29	
-#define MPU_I2CSLV1_CTRL_REG            0x2A	
-#define MPU_I2CSLV2_ADDR_REG            0x2B	
-#define MPU_I2CSLV2_REG			0x2C	
-#define MPU_I2CSLV2_CTRL_REG            0x2D	
-#define MPU_I2CSLV3_ADDR_REG            0x2E	
-#define MPU_I2CSLV3_REG			0x2F	
-#define MPU_I2CSLV3_CTRL_REG            0x30	
-#define MPU_I2CSLV4_ADDR_REG            0x31	
-#define MPU_I2CSLV4_REG			0x32	
-#define MPU_I2CSLV4_DO_REG		0x33	
-#define MPU_I2CSLV4_CTRL_REG            0x34	
-#define MPU_I2CSLV4_DI_REG		0x35	
+/* TWI Pins */
+#define MPU6050_SCL_M           27         //TWI SCL Pin
+#define MPU6050_SDA_M           26         //TWI SDA Pin
+
+/* MPU6050 Registers addresses */
+#define MPU6050_RA_SELF_TEST_X          0x0D 
+#define MPU6050_RA_SELF_TEST_Y          0x0E 
+#define MPU6050_RA_SELF_TEST_Z          0x0F 
+#define MPU6050_RA_SELF_TEST_A          0x10 
+#define MPU6050_RA_XG_OFFS_USRH         0x13 
+#define MPU6050_RA_XG_OFFS_USRL         0x14
+#define MPU6050_RA_YG_OFFS_USRH         0x15 
+#define MPU6050_RA_YG_OFFS_USRL         0x16
+#define MPU6050_RA_ZG_OFFS_USRH         0x17 
+#define MPU6050_RA_ZG_OFFS_USRL         0x18
+#define MPU6050_RA_SMPLRT_DIV           0x19
+#define MPU6050_RA_CONFIG               0x1A
+#define MPU6050_RA_GYRO_CONFIG          0x1B
+#define MPU6050_RA_ACCEL_CONFIG         0x1C
+#define MPU6050_RA_FF_THR               0x1D
+#define MPU6050_RA_FF_DUR               0x1E
+#define MPU6050_RA_MOT_THR              0x1F
+#define MPU6050_RA_MOT_DUR              0x20
+#define MPU6050_RA_ZRMOT_THR            0x21
+#define MPU6050_RA_ZRMOT_DUR            0x22
+#define MPU6050_RA_FIFO_EN              0x23
+#define MPU6050_RA_I2C_MST_CTRL         0x24
+#define MPU6050_RA_I2C_SLV0_ADDR        0x25
+#define MPU6050_RA_I2C_SLV0_REG         0x26
+#define MPU6050_RA_I2C_SLV0_CTRL        0x27
+#define MPU6050_RA_I2C_SLV1_ADDR        0x28
+#define MPU6050_RA_I2C_SLV1_REG         0x29
+#define MPU6050_RA_I2C_SLV1_CTRL        0x2A
+#define MPU6050_RA_I2C_SLV2_ADDR        0x2B
+#define MPU6050_RA_I2C_SLV2_REG         0x2C
+#define MPU6050_RA_I2C_SLV2_CTRL        0x2D
+#define MPU6050_RA_I2C_SLV3_ADDR        0x2E
+#define MPU6050_RA_I2C_SLV3_REG         0x2F
+#define MPU6050_RA_I2C_SLV3_CTRL        0x30
+#define MPU6050_RA_I2C_SLV4_ADDR        0x31
+#define MPU6050_RA_I2C_SLV4_REG         0x32
+#define MPU6050_RA_I2C_SLV4_DO          0x33
+#define MPU6050_RA_I2C_SLV4_CTRL        0x34
+#define MPU6050_RA_I2C_SLV4_DI          0x35
+#define MPU6050_RA_I2C_MST_STATUS       0x36
+#define MPU6050_RA_INT_PIN_CFG          0x37
+#define MPU6050_RA_INT_ENABLE           0x38
+#define MPU6050_RA_DMP_INT_STATUS       0x39
+#define MPU6050_RA_INT_STATUS           0x3A
+#define MPU6050_RA_ACCEL_XOUT_H         0x3B
+#define MPU6050_RA_ACCEL_XOUT_L         0x3C
+#define MPU6050_RA_ACCEL_YOUT_H         0x3D
+#define MPU6050_RA_ACCEL_YOUT_L         0x3E
+#define MPU6050_RA_ACCEL_ZOUT_H         0x3F
+#define MPU6050_RA_ACCEL_ZOUT_L         0x40
+#define MPU6050_RA_TEMP_OUT_H           0x41
+#define MPU6050_RA_TEMP_OUT_L           0x42
+#define MPU6050_RA_GYRO_XOUT_H          0x43
+#define MPU6050_RA_GYRO_XOUT_L          0x44
+#define MPU6050_RA_GYRO_YOUT_H          0x45
+#define MPU6050_RA_GYRO_YOUT_L          0x46
+#define MPU6050_RA_GYRO_ZOUT_H          0x47
+#define MPU6050_RA_GYRO_ZOUT_L          0x48
+#define MPU6050_RA_EXT_SENS_DATA_00     0x49
+#define MPU6050_RA_EXT_SENS_DATA_01     0x4A
+#define MPU6050_RA_EXT_SENS_DATA_02     0x4B
+#define MPU6050_RA_EXT_SENS_DATA_03     0x4C
+#define MPU6050_RA_EXT_SENS_DATA_04     0x4D
+#define MPU6050_RA_EXT_SENS_DATA_05     0x4E
+#define MPU6050_RA_EXT_SENS_DATA_06     0x4F
+#define MPU6050_RA_EXT_SENS_DATA_07     0x50
+#define MPU6050_RA_EXT_SENS_DATA_08     0x51
+#define MPU6050_RA_EXT_SENS_DATA_09     0x52
+#define MPU6050_RA_EXT_SENS_DATA_10     0x53
+#define MPU6050_RA_EXT_SENS_DATA_11     0x54
+#define MPU6050_RA_EXT_SENS_DATA_12     0x55
+#define MPU6050_RA_EXT_SENS_DATA_13     0x56
+#define MPU6050_RA_EXT_SENS_DATA_14     0x57
+#define MPU6050_RA_EXT_SENS_DATA_15     0x58
+#define MPU6050_RA_EXT_SENS_DATA_16     0x59
+#define MPU6050_RA_EXT_SENS_DATA_17     0x5A
+#define MPU6050_RA_EXT_SENS_DATA_18     0x5B
+#define MPU6050_RA_EXT_SENS_DATA_19     0x5C
+#define MPU6050_RA_EXT_SENS_DATA_20     0x5D
+#define MPU6050_RA_EXT_SENS_DATA_21     0x5E
+#define MPU6050_RA_EXT_SENS_DATA_22     0x5F
+#define MPU6050_RA_EXT_SENS_DATA_23     0x60
+#define MPU6050_RA_MOT_DETECT_STATUS    0x61
+#define MPU6050_RA_I2C_SLV0_DO          0x63
+#define MPU6050_RA_I2C_SLV1_DO          0x64
+#define MPU6050_RA_I2C_SLV2_DO          0x65
+#define MPU6050_RA_I2C_SLV3_DO          0x66
+#define MPU6050_RA_I2C_MST_DELAY_CTRL   0x67
+#define MPU6050_RA_SIGNAL_PATH_RESET    0x68
+#define MPU6050_RA_MOT_DETECT_CTRL      0x69
+#define MPU6050_RA_USER_CTRL            0x6A
+#define MPU6050_RA_PWR_MGMT_1           0x6B
+#define MPU6050_RA_PWR_MGMT_2           0x6C
+#define MPU6050_RA_BANK_SEL             0x6D
+#define MPU6050_RA_MEM_START_ADDR       0x6E
+#define MPU6050_RA_MEM_R_W              0x6F
+#define MPU6050_RA_DMP_CFG_1            0x70
+#define MPU6050_RA_DMP_CFG_2            0x71
+#define MPU6050_RA_FIFO_COUNTH          0x72
+#define MPU6050_RA_FIFO_COUNTL          0x73
+#define MPU6050_RA_FIFO_R_W             0x74
+#define MPU6050_RA_WHO_AM_I             0x75
 
 
-#define MPU_PWR_MGMT1_REG		0x6B	
-#define MPU_PWR_MGMT2_REG		0x6C	
+void twi_init (void);
+bool mpu6050_init(void);
 
-#define MPU_I2CMST_STA_REG		0x36	
-#define MPU_INTBP_CFG_REG		0x37	
-#define MPU_INT_EN_REG			0x38	
-#define MPU_INT_STA_REG			0x3A	
-
-#define MPU_I2CMST_DELAY_REG            0x67	
-#define MPU_SIGPATH_RST_REG		0x68	
-#define MPU_MDETECT_CTRL_REG            0x69	
-#define MPU_USER_CTRL_REG		0x6A	
-#define MPU_PWR_MGMT1_REG		0x6B	
-#define MPU_PWR_MGMT2_REG		0x6C	
-#define MPU_FIFO_CNTH_REG		0x72	
-#define MPU_FIFO_CNTL_REG		0x73	
-#define MPU_FIFO_RW_REG			0x74	
-#define MPU_DEVICE_ID_REG		0x75	
+bool mpu6050_twi_write(uint8_t register_address, const uint8_t value);
+bool mpu6050_twi_write(uint8_t register_address, const uint8_t value);
 
 #endif

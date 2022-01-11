@@ -5268,21 +5268,117 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x16d Output/Release/Obj/ActiviT/main.o
  .debug_macro   0x0000000000000000       0x10 Output/Release/Obj/ActiviT/main.o
  .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .group         0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
  .text          0x0000000000000000        0x0 Output/Release/Obj/ActiviT/mpu6050.o
  .data          0x0000000000000000        0x0 Output/Release/Obj/ActiviT/mpu6050.o
  .bss           0x0000000000000000        0x0 Output/Release/Obj/ActiviT/mpu6050.o
- .debug_info    0x0000000000000000       0x21 Output/Release/Obj/ActiviT/mpu6050.o
- .debug_abbrev  0x0000000000000000       0x16 Output/Release/Obj/ActiviT/mpu6050.o
+ .text.twi_handler
+                0x0000000000000000       0x10 Output/Release/Obj/ActiviT/mpu6050.o
+ .text.twi_init
+                0x0000000000000000       0x40 Output/Release/Obj/ActiviT/mpu6050.o
+ .text.mpu6050_twi_write
+                0x0000000000000000       0x38 Output/Release/Obj/ActiviT/mpu6050.o
+ .text.mpu6050_twi_read
+                0x0000000000000000        0xc Output/Release/Obj/ActiviT/mpu6050.o
+ .text.mpu6050_init
+                0x0000000000000000        0x4 Output/Release/Obj/ActiviT/mpu6050.o
+ .bss.m_xfer_done
+                0x0000000000000000        0x1 Output/Release/Obj/ActiviT/mpu6050.o
+ .rodata.m_twi  0x0000000000000000       0x10 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_frame   0x0000000000000000       0x84 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_info    0x0000000000000000      0xe6c Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_abbrev  0x0000000000000000      0x2f1 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_loc     0x0000000000000000      0x1ba Output/Release/Obj/ActiviT/mpu6050.o
  .debug_pubnames
-                0x0000000000000000       0x12 Output/Release/Obj/ActiviT/mpu6050.o
+                0x0000000000000000      0x29e Output/Release/Obj/ActiviT/mpu6050.o
  .debug_pubtypes
-                0x0000000000000000       0x12 Output/Release/Obj/ActiviT/mpu6050.o
+                0x0000000000000000      0x232 Output/Release/Obj/ActiviT/mpu6050.o
  .debug_aranges
-                0x0000000000000000       0x18 Output/Release/Obj/ActiviT/mpu6050.o
- .debug_macro   0x0000000000000000       0x1b Output/Release/Obj/ActiviT/mpu6050.o
+                0x0000000000000000       0x40 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_ranges  0x0000000000000000       0x30 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x258 Output/Release/Obj/ActiviT/mpu6050.o
  .debug_macro   0x0000000000000000      0xaea Output/Release/Obj/ActiviT/mpu6050.o
- .debug_line    0x0000000000000000       0x88 Output/Release/Obj/ActiviT/mpu6050.o
- .debug_str     0x0000000000000000     0x2cd2 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x89 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x78 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x22 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000     0x1a7a Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x1a3 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x16 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x22 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x3b Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x1c Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x22 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0xfb Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000     0x1011 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x11f Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x402 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000    0x10cfd Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0xa65 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x96 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x40 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x462 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x59 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0xe62 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0xfd Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x16 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x16d Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x7ca Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x3f Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x8e Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0xad Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x49 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x8c Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x19 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x1d Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x35 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x7b Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x64 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x20 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x56 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x3e Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000       0x7f Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_macro   0x0000000000000000      0x280 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_line    0x0000000000000000      0x7c7 Output/Release/Obj/ActiviT/mpu6050.o
+ .debug_str     0x0000000000000000    0x8e6d6 Output/Release/Obj/ActiviT/mpu6050.o
  .comment       0x0000000000000000       0x26 Output/Release/Obj/ActiviT/mpu6050.o
  .ARM.attributes
                 0x0000000000000000       0x39 Output/Release/Obj/ActiviT/mpu6050.o

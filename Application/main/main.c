@@ -1,6 +1,5 @@
 #include "boards.h"
 #include "nrf_delay.h"
-#include <stdbool.h>
 #include <stdint.h>
 
 int button1_state, button2_state, button4_state;
