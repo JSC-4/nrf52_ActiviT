@@ -113,10 +113,14 @@
 #define MPU6050_RA_WHO_AM_I             0x75
 
 
-void twi_init (void);
+void twi_init(void);
 bool mpu6050_init(void);
 
+bool mpu6050_who_am_i(void);
+
 bool mpu6050_twi_write(uint8_t register_address, const uint8_t value);
-bool mpu6050_twi_write(uint8_t register_address, const uint8_t value);
+bool mpu6050_twi_read(uint8_t register_address, uint8_t *rec_data, uint8_t number_of_bytes);
+
+bool mpu6050_ReadAcc(int16_t *pACC_X , int16_t *pACC_Y , int16_t *pACC_Z);
 
 #endif
