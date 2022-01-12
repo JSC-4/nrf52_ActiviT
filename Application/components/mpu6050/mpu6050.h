@@ -8,6 +8,8 @@
 #define MPU6050_SCL_M           27         //TWI SCL Pin
 #define MPU6050_SDA_M           26         //TWI SDA Pin
 
+#define MCP6050_SLEEP   0x06
+
 /* MPU6050 Registers addresses */
 #define MPU6050_RA_SELF_TEST_X          0x0D 
 #define MPU6050_RA_SELF_TEST_Y          0x0E 
@@ -114,13 +116,20 @@
 
 
 void twi_init(void);
-bool mpu6050_init(void);
-
-bool mpu6050_who_am_i(void);
-
 bool mpu6050_twi_write(uint8_t register_address, const uint8_t value);
 bool mpu6050_twi_read(uint8_t register_address, uint8_t *rec_data, uint8_t number_of_bytes);
 
+
+bool mpu6050_who_am_i(uint8_t *who);
+
+
+
+bool mpu6050_WakeUp(void);
+bool mpu6050_Sleep(void);
+
 bool mpu6050_ReadAcc(int16_t *pACC_X , int16_t *pACC_Y , int16_t *pACC_Z);
+bool mpu6050_ReadGyro(int16_t *pGYRO_X , int16_t *pGYRO_Y , int16_t *pGYRO_Z);
+bool mpu6050_ReadTemp(int16_t *pTemp);
+
 
 #endif

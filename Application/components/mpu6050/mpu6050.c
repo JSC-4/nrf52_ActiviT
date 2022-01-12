@@ -86,17 +86,6 @@ bool mpu6050_twi_read(uint8_t register_address, uint8_t *rec_data, uint8_t numbe
   return NRF_SUCCESS;
 }
 
-bool mpu6050_init(void) {
-
-  mpu6050_twi_write(MPU6050_RA_PWR_MGMT_1, 0x00);
-  //mpu6050_twi_write(MPU6050_RA_SMPLRT_DIV , 0x07); 
-  //mpu6050_twi_write(MPU6050_RA_CONFIG , 0x06); 						
-  //mpu6050_twi_write(MPU6050_RA_INT_ENABLE, 0x00); 
-  //mpu6050_twi_write(MPU6050_RA_ACCEL_CONFIG,0x00); 
-
-  return NRF_SUCCESS;
-}
-
 bool mpu6050_ReadAcc(int16_t *pACC_X , int16_t *pACC_Y , int16_t *pACC_Z)
 {
 
@@ -104,20 +93,76 @@ bool mpu6050_ReadAcc(int16_t *pACC_X , int16_t *pACC_Y , int16_t *pACC_Z)
 
   mpu6050_twi_read(MPU6050_RA_ACCEL_XOUT_H, data_buf, sizeof(data_buf));
 
-    *pACC_X = (data_buf[0] << 8) | data_buf[1];
-   // if(*pACC_X & 0x8000) *pACC_X-=65536;
-
-    *pACC_Y= (data_buf[2] << 8) | data_buf[3];
-   // if(*pACC_Y & 0x8000) *pACC_Y-=65536;
-
-    *pACC_Z = (data_buf[4] << 8) | data_buf[5];
-   // if(*pACC_Z & 0x8000) *pACC_Z-=65536;
+  *pACC_X = (data_buf[0] << 8) | data_buf[1];
+  *pACC_Y= (data_buf[2] << 8) | data_buf[3];
+  *pACC_Z = (data_buf[4] << 8) | data_buf[5];
 
   return NRF_SUCCESS;
 }
 
-bool mpu6050_who_am_i(void)
+bool mpu6050_ReadGyro(int16_t *pGYRO_X , int16_t *pGYRO_Y , int16_t *pGYRO_Z)
 {
-//  mpu6050_twi_read(MPU6050_ADDRESS, data_buf, sizeof(data_buf));
-return NRF_SUCCESS;
+
+  uint8_t data_buf[6];
+
+  mpu6050_twi_read(MPU6050_RA_GYRO_XOUT_H, data_buf, sizeof(data_buf));
+
+  *pGYRO_X = (data_buf[0] << 8) | data_buf[1];
+  *pGYRO_Y=  (data_buf[2] << 8) | data_buf[3];
+  *pGYRO_Z = (data_buf[4] << 8) | data_buf[5];
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_ReadTemp(int16_t *pTemp)
+{
+
+  uint8_t data_buf[2];
+
+  mpu6050_twi_read(MPU6050_RA_TEMP_OUT_H, data_buf, sizeof(data_buf));
+
+  *pTemp = (data_buf[0] << 8) | data_buf[1];
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_who_am_i(uint8_t *who)
+{
+
+  mpu6050_twi_read(MPU6050_RA_WHO_AM_I, who, sizeof(who));
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_setACCRange(uint8_t *who)
+{
+
+  mpu6050_twi_read(MPU6050_RA_WHO_AM_I, who, sizeof(who));
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_setGYRORange(uint8_t *who)
+{
+
+  mpu6050_twi_read(MPU6050_RA_WHO_AM_I, who, sizeof(who));
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_WakeUp(void)
+{
+
+  mpu6050_twi_write(MPU6050_RA_PWR_MGMT_1, 0x00);
+  nrf_delay_ms(30);
+
+  return NRF_SUCCESS;
+}
+
+bool mpu6050_Sleep(void)
+{
+
+  mpu6050_twi_write(MPU6050_RA_PWR_MGMT_1, (1 << MCP6050_SLEEP));
+
+  return NRF_SUCCESS;
 }

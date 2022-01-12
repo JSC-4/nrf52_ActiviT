@@ -706,7 +706,9 @@ static void advertising_start(bool erase_bonds)
  */
 int main(void)
 {
-static int16_t AccValue[3];
+static int16_t AccValue[3], GyroValue[3];
+static int16_t Temperature;
+static uint8_t who_am_i;
     twi_init();
     mpu6050_init();
     //bool erase_bonds;
@@ -736,11 +738,23 @@ static int16_t AccValue[3];
     // Enter main loop.
     for (;;)
     {
-    mpu6050_ReadAcc(&AccValue[0], &AccValue[1], &AccValue[2]);
-          NRF_LOG_INFO("ACC Values:  x = %d  y = %d  z = %d", AccValue[0], AccValue[1], AccValue[2]); // display the read values
-         NRF_LOG_FLUSH();
-         nrf_delay_ms(500);
-      //  idle_state_handle();
+          //mpu6050_ReadAcc(&AccValue[0], &AccValue[1], &AccValue[2]);
+          //NRF_LOG_INFO("ACC Values:  x = %d  y = %d  z = %d", AccValue[0], AccValue[1], AccValue[2]); // display the read values
+
+        //mpu6050_who_am_i(&who_am_i);
+        //NRF_LOG_INFO("Device Address: 0x%x", who_am_i);
+
+      mpu6050_ReadGyro(&GyroValue[0], &GyroValue[1], &GyroValue[2]);
+      NRF_LOG_INFO("Gyro Values:  x = %d  y = %d  z = %d", GyroValue[0], GyroValue[1], GyroValue[2]); // display the read values
+
+      mpu6050_ReadTemp(&Temperature);
+      NRF_LOG_INFO("T:  %d", (float)(Temperature)/340+36.53); // display the read values
+
+        NRF_LOG_FLUSH();
+        nrf_delay_ms(500);
+
+
+        //  idle_state_handle();
     }
 }
 

@@ -1,0 +1,53 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="ActiviT"/>
+  <ProjectSessionItem path="ActiviT;ActiviT"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;Application"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;Application;component"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;Application;component;mpu6050"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;Application;config"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;Application;main"/>
+  <ProjectSessionItem path="ActiviT;ActiviT;nRF_Drivers"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="73" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main/main.c" selected="0" top="63" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="5885" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="5871" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="95" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../components/mpu6050/mpu6050.c" selected="1" top="84" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="31" y="55" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../components/mpu6050/mpu6050.h" selected="0" top="51" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="56" y="535" useTextEdit="1" openedFrom="C:/Users/jsc/Documents/Embedded/nRF/nRF52_ActiviT/Application/components/mpu6050/mpu6050.c" useBinaryEdit="0" left="0" path="../../../../nRF5_SDK_17.0.2_d674dde/integration/nrfx/legacy/nrf_drv_twi.h" selected="0" top="513" codecName="Default"/>
+ </Files>
+ <ARMCrossStudioWindow activeProject="ActiviT" fileDialogDefaultFilter="*.c;*.cpp;*.cxx;*.cc;*.h;*.hpp;*.hxx" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/jsc/Documents/Embedded/nRF/nRF52_ActiviT/nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/src" debugSearchPath="" autoConnectCapabilities="3711"/>
+</session>
