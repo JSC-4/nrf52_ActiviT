@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
+#include "nrf_delay.h"
 #include "mpu6050.h"
 #include "nrf_drv_twi.h"
 
@@ -134,18 +135,18 @@ bool mpu6050_who_am_i(uint8_t *who)
   return NRF_SUCCESS;
 }
 
-bool mpu6050_setACCRange(uint8_t *who)
+bool mpu6050_setACCRange(mpu6050_acc_range pConfig)
 {
 
-  mpu6050_twi_read(MPU6050_RA_WHO_AM_I, who, sizeof(who));
+  mpu6050_twi_write(MPU6050_RA_ACCEL_CONFIG, pConfig << 3);
 
   return NRF_SUCCESS;
 }
 
-bool mpu6050_setGYRORange(uint8_t *who)
+bool mpu6050_setGYRORange(mpu6050_gyro_range pConfig)
 {
 
-  mpu6050_twi_read(MPU6050_RA_WHO_AM_I, who, sizeof(who));
+  mpu6050_twi_write(MPU6050_RA_GYRO_CONFIG, pConfig << 3);
 
   return NRF_SUCCESS;
 }

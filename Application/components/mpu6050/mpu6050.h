@@ -10,6 +10,22 @@
 
 #define MCP6050_SLEEP   0x06
 
+
+typedef enum {
+  MPU6050_ACC_RANGE_2G,  // +/- 2g (default)
+  MPU6050_ACC_RANGE_4G,  // +/- 4g
+  MPU6050_ACC_RANGE_8G,  // +/- 8g
+  MPU6050_ACC_RANGE_16G // +/- 16g
+} mpu6050_acc_range;
+
+typedef enum {
+  MPU6050_GYRO_RANGE_250,  // +/- 250 deg/s (default)
+  MPU6050_GYRO_RANGE_500,  // +/- 500 deg/s
+  MPU6050_GYRO_RANGE_1000, // +/- 1000 deg/s
+  MPU6050_GYRO_RANGE_2000  // +/- 2000 deg/s
+} mpu6050_gyro_range;
+
+
 /* MPU6050 Registers addresses */
 #define MPU6050_RA_SELF_TEST_X          0x0D 
 #define MPU6050_RA_SELF_TEST_Y          0x0E 
@@ -121,11 +137,11 @@ bool mpu6050_twi_read(uint8_t register_address, uint8_t *rec_data, uint8_t numbe
 
 
 bool mpu6050_who_am_i(uint8_t *who);
-
-
-
 bool mpu6050_WakeUp(void);
 bool mpu6050_Sleep(void);
+
+bool mpu6050_setACCRange(uint8_t pConfig);
+bool mpu6050_setGYRORange(uint8_t pConfig);
 
 bool mpu6050_ReadAcc(int16_t *pACC_X , int16_t *pACC_Y , int16_t *pACC_Z);
 bool mpu6050_ReadGyro(int16_t *pGYRO_X , int16_t *pGYRO_Y , int16_t *pGYRO_Z);

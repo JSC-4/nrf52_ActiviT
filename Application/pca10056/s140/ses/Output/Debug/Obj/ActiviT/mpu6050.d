@@ -2,8 +2,7 @@ Output/Debug/Obj/ActiviT/mpu6050.o: \
  C\:\Users\jsc\Documents\Embedded\nRF\nRF52_ActiviT\Application\components\mpu6050\mpu6050.c \
  C\:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.50d/include/stdbool.h \
  C\:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.50d/include/stdint.h \
- C\:\Users\jsc\Documents\Embedded\nRF\nRF52_ActiviT\Application\components\mpu6050\mpu6050.h \
- ../../../../nRF5_SDK_17.0.2_d674dde/integration/nrfx/legacy/nrf_drv_twi.h \
+ ../../../../nRF5_SDK_17.0.2_d674dde/components/libraries/delay/nrf_delay.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/modules/nrfx/nrfx.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_config.h \
  ../config/sdk_config.h \
@@ -54,6 +53,8 @@ Output/Debug/Obj/ActiviT/mpu6050.o: \
  ../../../../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_sd_def.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_soc.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/nrfx_errors.h \
+ C\:\Users\jsc\Documents\Embedded\nRF\nRF52_ActiviT\Application\components\mpu6050\mpu6050.h \
+ ../../../../nRF5_SDK_17.0.2_d674dde/integration/nrfx/legacy/nrf_drv_twi.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/include/nrfx_twim.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/include/nrfx_twi_twim.h \
  ../../../../nRF5_SDK_17.0.2_d674dde/modules/nrfx/hal/nrf_twim.h \

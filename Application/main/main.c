@@ -710,7 +710,9 @@ static int16_t AccValue[3], GyroValue[3];
 static int16_t Temperature;
 static uint8_t who_am_i;
     twi_init();
-    mpu6050_init();
+    mpu6050_setGYRORange(MPU6050_GYRO_RANGE_2000);
+    mpu6050_setACCRange(MPU6050_ACC_RANGE_16G);
+    mpu6050_WakeUp();
     //bool erase_bonds;
 
     // Initialize.
@@ -738,21 +740,13 @@ static uint8_t who_am_i;
     // Enter main loop.
     for (;;)
     {
-          //mpu6050_ReadAcc(&AccValue[0], &AccValue[1], &AccValue[2]);
-          //NRF_LOG_INFO("ACC Values:  x = %d  y = %d  z = %d", AccValue[0], AccValue[1], AccValue[2]); // display the read values
+        mpu6050_ReadGyro(&GyroValue[0], &GyroValue[1], &GyroValue[2]);
+        mpu6050_ReadAcc(&AccValue[0], &AccValue[1], &AccValue[2]);
+        mpu6050_ReadTemp(&Temperature);
 
-        //mpu6050_who_am_i(&who_am_i);
-        //NRF_LOG_INFO("Device Address: 0x%x", who_am_i);
-
-      mpu6050_ReadGyro(&GyroValue[0], &GyroValue[1], &GyroValue[2]);
-      NRF_LOG_INFO("Gyro Values:  x = %d  y = %d  z = %d", GyroValue[0], GyroValue[1], GyroValue[2]); // display the read values
-
-      mpu6050_ReadTemp(&Temperature);
-      NRF_LOG_INFO("T:  %d", (float)(Temperature)/340+36.53); // display the read values
-
+        NRF_LOG_INFO("G: %d, %d, %d \t A: %d, %d, %d", GyroValue[0], GyroValue[1], GyroValue[2], AccValue[0], AccValue[1], AccValue[2]); // display the read values
         NRF_LOG_FLUSH();
         nrf_delay_ms(500);
-
 
         //  idle_state_handle();
     }
